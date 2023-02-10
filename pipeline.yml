@@ -1,11 +1,23 @@
+name: Connect to DigitalOcean
+
+on:
+  push:
+    branches:
+      - master
+
 env:
-  DIGITALOCEANAPIKEY: ${{ secrets.DIGITALOCEANAPIKEY }}
+  DIGITALOCEAN: ${{ secrets.DIGITALOCEAN }}
 
 jobs:
-  deploy:
+  connect:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Deploy to DigitalOcean
-        run: |
-          doctl --access-token=${{ env.DIGITALOCEANAPIKEY }} 
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Connect to DigitalOcean
+      uses: digitalocean/action-doctl@v1
+      with:
+        api_token: ${{ env.DIGITALOCEAN }}
+        command: version
