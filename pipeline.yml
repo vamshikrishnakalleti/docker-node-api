@@ -3,9 +3,21 @@ name: Connect to DigitalOcean
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   DIGITALOCEAN: ${{ secrets.DIGITALOCEAN }}
 
+jobs:
+  connect:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
 
+    - name: Connect to DigitalOcean
+      uses: digitalocean/action-doctl@v1
+      with:
+        api_token: ${{ env.DIGITALOCEAN }}
+        command: version
