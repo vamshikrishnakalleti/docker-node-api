@@ -4,7 +4,7 @@
     "namespace": "fn-00ebbf3c-2fec-4792-b20a-5281bff3d46d",
     "packageVersions": {
       "cloud": {
-        "version": "0.0.5",
+        "version": "0.0.7",
         "digest": "80c0e54ff61d9c643f4702f864ea66a881e23e99f5582c19169133ffa0a13fda"
       }
     },
