@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  DIGITALOCEAN-API-KEY: ${{ secrets.DIGITALOCEAN-API-KEY }}
+  DIGITALOCEANAPIKEY: ${{ secrets.DIGITALOCEANAPIKEY }}
 
 jobs:
   deploy:
@@ -34,4 +34,4 @@ jobs:
       run: |
         npx serverless deploy
       env:
-        secrets.DIGITALOCEAN-API-KEY: ${{ env.DIGITALOCEAN-API-KEY }}
+        DIGITALOCEANAPIKEY: ${{ env.DIGITALOCEANAPIKEY }}
