@@ -10,7 +10,7 @@ env:
 
 jobs:
   connect:
-    runs-on: ubuntu-latest
+    runs-on: docker-ubuntu-s-1vcpu-1gb-blr1-01
     
     steps:
     - name: Checkout code
