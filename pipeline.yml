@@ -10,7 +10,7 @@ env:
 
 jobs:
   connect:
-    runs-on: Ubuntu 22.04.1
+    runs-on: Ubuntu-latest
     
     steps:
     - name: Checkout code
