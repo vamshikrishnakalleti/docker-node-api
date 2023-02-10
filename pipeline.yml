@@ -10,7 +10,7 @@ env:
 
 jobs:
   connect:
-    runs-on: docker-ubuntu-s-1vcpu-1gb-blr1-01
+    runs-on: Ubuntu 22.04.1
     
     steps:
     - name: Checkout code
