@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: Deploy to DigitalOcean
         run: |
-          doctl --access-token=${{ env.DIGITALOCEANAPIKEY }} deploy ...
+          doctl --access-token=${{ env.DIGITALOCEANAPIKEY }} 
